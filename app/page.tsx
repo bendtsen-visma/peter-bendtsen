@@ -37,7 +37,8 @@ export default function Home() {
         <div className="flex flex-row w-full">
         <Card className="w-80 m-5 shadow-lg transition-transform transform hover:scale-105 duration-300">
               <figure>
-                <img className="rounded-t-lg" src="aurora.PNG" alt="Shoes" />
+                {/* <img className="rounded-t-lg" src="aurora.PNG" alt="Shoes" /> */}
+                <Image src="/aurora.png" className="rounded-t-lg" alt="Aurora" width={320} height={200} />
               </figure>
             <CardHeader>
               <div className="flex flex-row justify-between">
