@@ -11,6 +11,8 @@ import {
 } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { CircleArrowRight } from 'lucide-react';
+import { Linkedin } from 'lucide-react';
+
 
 function openLink(link: string) {
   window.open(link);
@@ -19,9 +21,16 @@ function openLink(link: string) {
 export default function Home() {
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <h1 className="scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl">Peter Bendtsen</h1>
 
-      <h2 className=" text-base m-20">Projects</h2>
+    <div className="bg-cover bg-center w-full h-full absolute top-0 left-0"
+        style={{ backgroundImage: `url('/bg-purple3.png')`, backgroundAttachment: 'fixed', position: 'fixed', zIndex: -1 }}>
+    </div>
+
+      {/* <h1 className="scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl">Peter Bendtsen</h1> */}
+      <h1 className="scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl pr-20">Peter</h1>
+      <h1 className="scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl pl-20">Bendtsen</h1>
+
+      <h2 className=" text-base text-gray-500 m-20 text-xl">Projects</h2>
 
       <div className="flex flex-col">
 
@@ -72,11 +81,14 @@ export default function Home() {
         <div className="flex flex-row w-full">
           <Card className="w-80 m-5 shadow-lg transition-transform transform hover:scale-105 duration-300">
               <figure>
-                <img className=" rounded-t-lg" src="aurora.PNG" alt="Shoes" />
+                <img className=" rounded-t-lg" src="aioli2.PNG" alt="Shoes" />
               </figure>
             <CardHeader>
-              <CardTitle>Recipe Generator</CardTitle>
-              <CardDescription>Card Description</CardDescription>
+              <div className="flex flex-row justify-between">
+                <CardTitle>Aioli</CardTitle>
+                <CircleArrowRight className=" hover:text-green-300 hover:cursor-pointer" onClick={() => openLink("localhost:3000")}></CircleArrowRight>
+              </div>
+              <CardDescription>Recipe generator</CardDescription>
             </CardHeader>
             <CardContent>
               <p>Card Content</p>
@@ -89,10 +101,14 @@ export default function Home() {
           
           <Card className="w-80 m-5 shadow-lg transition-transform transform hover:scale-105 duration-300">
               <figure>
-                <img className=" rounded-t-lg" src="aurora.PNG" alt="Shoes" />
+                <img className="rounded-t-lg" src="tableplanner.PNG" alt="Shoes" />
               </figure>
             <CardHeader>
-              <CardTitle>Table Planner</CardTitle>
+              <div className="flex flex-row justify-between">
+                <CardTitle>Table Planner</CardTitle>
+                <CircleArrowRight className=" hover:text-pink-400 hover:cursor-pointer" onClick={() => openLink("https://table-planner.vercel.app/")}></CircleArrowRight>
+              </div>
+
               
               <CardDescription>Card Description</CardDescription>
             </CardHeader>
@@ -106,6 +122,19 @@ export default function Home() {
 
         </div>
       </div>
+
+      <div className="bg-cover bg-center w-full h-full absolute bottom-0 left-0"
+          style={{ backgroundImage: `url('/facade3.png')`, backgroundAttachment: 'fixed', position: 'fixed', zIndex: -1 }}>
+        <Image src="/blur1.png" alt="Logo" width={300} height={200} /> 
+      </div>
+
+
+      <div className="mt-20 mb-10">
+        <p className="text-gray-500">+45 42 20 24 50</p>
+        <p className="text-gray-500">peter_b@live.dk</p>
+      </div>
+
+      <Linkedin onClick={() => openLink("https://dk.linkedin.com/in/peter-bendtsen-1451b2142")} className="text-gray-500 mt-10 hover:cursor-pointer" />
 
     </main>
   );
