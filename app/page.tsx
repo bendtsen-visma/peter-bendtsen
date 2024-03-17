@@ -45,10 +45,10 @@ export default function Home() {
                 <CardTitle>Bageriet Aurora</CardTitle>
                 <CircleArrowRight className="hover:text-blue-700 hover:cursor-pointer" onClick={() => openLink("https://bagerietaurora.dk")}></CircleArrowRight>
               </div>
-              <CardDescription>Card Description</CardDescription>
+              <CardDescription>Landing page and dashboard</CardDescription>
             </CardHeader>
             <CardContent>
-              <p>Card Content</p>
+              <p>A landing page for the Copenhagen based pop-up bakery Aurora, with a corresponding admin dashboard</p>
             </CardContent>
             <CardFooter>
               <Badge className="mr-1">Next.js</Badge>
@@ -59,17 +59,18 @@ export default function Home() {
           
           <Card className="w-80 m-5 shadow-lg transition-transform transform hover:scale-105 duration-300">
               <figure>
-                <img className="rounded-t-lg" src="runroute.PNG" alt="Shoes" />
+                {/* <img className="rounded-t-lg" src="runroute.PNG" alt="Shoes" /> */}
+                <Image src="/runroute.png" className="rounded-t-lg" alt="RunRoute" width={320} height={200} />
               </figure>
             <CardHeader>
               <div className="flex flex-row justify-between">
-                <CardTitle>RunRoute</CardTitle>
+                <CardTitle>Run Route</CardTitle>
                 <CircleArrowRight className="hover:text-purple-700 hover:cursor-pointer" onClick={() => openLink("localhost:3000")}></CircleArrowRight>
               </div>
-              <CardDescription>Card Description</CardDescription>
+              <CardDescription>Route generator</CardDescription>
             </CardHeader>
             <CardContent>
-              <p>Card Content</p>
+              <p>A tool for generating your next running trip based on user specified location and distance</p>
             </CardContent>
             <CardFooter>
               <Badge className="mr-1">React</Badge>
@@ -82,7 +83,8 @@ export default function Home() {
         <div className="flex flex-row w-full">
           <Card className="w-80 m-5 shadow-lg transition-transform transform hover:scale-105 duration-300">
               <figure>
-                <img className=" rounded-t-lg" src="aioli2.PNG" alt="Shoes" />
+                {/* <img className=" rounded-t-lg" src="aioli2.PNG" alt="Shoes" /> */}
+                <Image src="/aioli2.png" className="rounded-t-lg" alt="Aioli" width={320} height={200} />
               </figure>
             <CardHeader>
               <div className="flex flex-row justify-between">
@@ -92,7 +94,7 @@ export default function Home() {
               <CardDescription>Recipe generator</CardDescription>
             </CardHeader>
             <CardContent>
-              <p>Card Content</p>
+              <p>An experiment with the OpenAI API taking an outset in everyday decision-making</p>
             </CardContent>
             <CardFooter>
               <Badge className="mr-1">Angular</Badge>
@@ -102,19 +104,19 @@ export default function Home() {
           
           <Card className="w-80 m-5 shadow-lg transition-transform transform hover:scale-105 duration-300">
               <figure>
-                <img className="rounded-t-lg" src="tableplanner.PNG" alt="Shoes" />
+                {/* <img className="rounded-t-lg" src="tableplanner.PNG" alt="Shoes" /> */}
+                <Image src="/tableplanner.png" className="rounded-t-lg" alt="TablePlanner" width={320} height={200} />
               </figure>
             <CardHeader>
               <div className="flex flex-row justify-between">
                 <CardTitle>Table Planner</CardTitle>
                 <CircleArrowRight className=" hover:text-pink-400 hover:cursor-pointer" onClick={() => openLink("https://table-planner.vercel.app/")}></CircleArrowRight>
               </div>
-
-              
-              <CardDescription>Card Description</CardDescription>
+              <CardDescription>Planning tool</CardDescription>
             </CardHeader>
             <CardContent>
-              <p>Card Content</p>
+              <p>A dynamic drag-and-drop tool for organising your next party!</p>
+              <br/>
             </CardContent>
             <CardFooter>
               <Badge>Angular</Badge>
@@ -123,12 +125,6 @@ export default function Home() {
 
         </div>
       </div>
-
-      <div className="bg-cover bg-center w-full h-full absolute bottom-0 left-0"
-          style={{ backgroundImage: `url('/facade3.png')`, backgroundAttachment: 'fixed', position: 'fixed', zIndex: -1 }}>
-        <Image src="/blur1.png" alt="Logo" width={300} height={200} /> 
-      </div>
-
 
       <div className="mt-20 mb-10">
         <p className="text-gray-500">+45 42 20 24 50</p>
